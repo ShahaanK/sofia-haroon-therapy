@@ -109,13 +109,13 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-purple-50 to-stone-50">
       {/* Navigation */}
       <nav className="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-semibold text-slate-800">Sofia Haroon</span>
@@ -126,8 +126,8 @@ const App = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-slate-700 hover:text-teal-600 transition-colors ${
-                    activeSection === item.toLowerCase() ? 'text-teal-600 font-semibold' : ''
+                  className={`text-slate-700 hover:text-purple-600 transition-colors ${
+                    activeSection === item.toLowerCase() ? 'text-purple-600 font-semibold' : ''
                   }`}
                 >
                   {item}
@@ -151,7 +151,7 @@ const App = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left px-3 py-2 text-slate-700 hover:bg-teal-50 rounded-md"
+                  className="block w-full text-left px-3 py-2 text-slate-700 hover:bg-purple-50 rounded-md"
                 >
                   {item}
                 </button>
@@ -168,7 +168,7 @@ const App = () => {
             <div className="space-y-6">
               <h1 className="text-5xl font-bold text-slate-800 leading-tight">
                 A Warm, Empathic Space for
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600"> Healing & Growth</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800"> Healing & Growth</span>
               </h1>
               <p className="text-xl text-slate-600">
                 Humanistic Integrative Therapist offering trauma-informed therapy, grief counselling, 
@@ -177,32 +177,33 @@ const App = () => {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="px-8 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full hover:shadow-lg transition-all transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-full hover:shadow-lg transition-all transform hover:scale-105"
                 >
                   Book a Session
                 </button>
                 <button
                   onClick={() => scrollToSection('about')}
-                  className="px-8 py-3 bg-white text-teal-600 border-2 border-teal-600 rounded-full hover:bg-teal-50 transition-all"
+                  className="px-8 py-3 bg-white text-purple-600 border-2 border-purple-600 rounded-full hover:bg-purple-50 transition-all"
                 >
                   Learn More
                 </button>
               </div>
               <div className="flex flex-wrap gap-6 pt-4">
                 <div className="flex items-center space-x-2 text-slate-600">
-                  <Award className="w-5 h-5 text-teal-600" />
+                  <Award className="w-5 h-5 text-purple-600" />
                   <span>MSc Psychology & Neuroscience</span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-600">
-                  <CheckCircle className="w-5 h-5 text-teal-600" />
+                  <CheckCircle className="w-5 h-5 text-purple-600" />
                   <span>CPPD Certified</span>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-blue-500 rounded-3xl transform rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-300 to-purple-500 rounded-3xl transform rotate-3"></div>
               <img
-                src={`${import.meta.env.BASE_URL}images/sofia-profile.png`} 
+                src="/images/sofia-profile.jpg"
+                alt="Sofia Haroon - Humanistic Integrative Therapist"
                 className="relative rounded-3xl shadow-2xl w-full object-cover"
               />
             </div>
@@ -240,23 +241,23 @@ const App = () => {
               </p>
             </div>
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-6 rounded-2xl">
+              <div className="bg-gradient-to-br from-purple-50 to-stone-50 p-6 rounded-2xl">
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Qualifications & Training</h3>
                 <ul className="space-y-3">
                   {qualifications.map((qual, idx) => (
                     <li key={idx} className="flex items-start space-x-2">
-                      <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                       <span className="text-slate-700">{qual}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-6 rounded-2xl">
+              <div className="bg-gradient-to-br from-stone-50 to-purple-50 p-6 rounded-2xl">
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Languages</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">English</span>
-                    <span className="text-sm text-teal-600">Native</span>
+                    <span className="text-sm text-purple-600">Native</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Urdu</span>
@@ -264,7 +265,7 @@ const App = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">French</span>
-                    <span className="text-sm text-teal-600">Limited Working</span>
+                    <span className="text-sm text-purple-600">Limited Working</span>
                   </div>
                 </div>
               </div>
@@ -286,7 +287,7 @@ const App = () => {
                 key={idx}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-blue-100 rounded-2xl flex items-center justify-center mb-4 text-teal-600">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-stone-100 rounded-2xl flex items-center justify-center mb-4 text-purple-600">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-3">{service.title}</h3>
@@ -299,7 +300,7 @@ const App = () => {
               For pricing information and session availability, please{' '}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-teal-600 font-semibold hover:underline"
+                className="text-purple-600 font-semibold hover:underline"
               >
                 get in touch
               </button>
@@ -351,7 +352,7 @@ const App = () => {
                 key={idx}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
               >
-                <div className="text-teal-600 text-5xl mb-4">"</div>
+                <div className="text-purple-600 text-5xl mb-4">"</div>
                 <p className="text-slate-700 italic mb-6">{testimonial.text}</p>
                 <div className="border-t pt-4">
                   <p className="font-semibold text-slate-800">{testimonial.author}</p>
@@ -364,7 +365,7 @@ const App = () => {
       </section>
 
       {/* Contact & Booking Section */}
-      <section id="contact" className="py-16 px-4 bg-gradient-to-br from-teal-50 to-blue-50">
+      <section id="contact" className="py-16 px-4 bg-gradient-to-br from-purple-50 to-stone-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-slate-800 mb-12">Get in Touch</h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -378,7 +379,7 @@ const App = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -421,7 +422,7 @@ const App = () => {
                 </div>
                 <button
                   onClick={handleContactSubmit}
-                  className="w-full px-8 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all transform hover:scale-105"
+                  className="w-full px-8 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-lg hover:shadow-lg transition-all transform hover:scale-105"
                 >
                   Send Message
                 </button>
@@ -501,7 +502,7 @@ const App = () => {
                   </div>
                   <button
                     onClick={handleBookingSubmit}
-                    className="w-full px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg hover:shadow-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2"
+                    className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-lg hover:shadow-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2"
                   >
                     <Calendar className="w-5 h-5" />
                     <span>Request Booking</span>
@@ -513,13 +514,13 @@ const App = () => {
               <div className="bg-white p-8 rounded-2xl shadow-lg space-y-4">
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Contact Information</h3>
                 <div className="flex items-center space-x-3 text-slate-700">
-                  <Mail className="w-5 h-5 text-teal-600" />
-                  <a href="mailto:sofiaharoon92@gmail.com" className="hover:text-teal-600">
+                  <Mail className="w-5 h-5 text-purple-600" />
+                  <a href="mailto:sofiaharoon92@gmail.com" className="hover:text-purple-600">
                     sofiaharoon92@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-700">
-                  <Phone className="w-5 h-5 text-teal-600" />
+                  <Phone className="w-5 h-5 text-purple-600" />
                   <span>+44 20 1234 5678</span>
                 </div>
                 <div className="pt-4 border-t">
@@ -542,7 +543,7 @@ const App = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
                   <Heart className="w-6 h-6" />
                 </div>
                 <span className="text-xl font-semibold">Sofia Haroon</span>
@@ -554,10 +555,10 @@ const App = () => {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-teal-400">About</button></li>
-                <li><button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-teal-400">Services</button></li>
-                <li><button onClick={() => scrollToSection('approach')} className="text-slate-300 hover:text-teal-400">Approach</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-teal-400">Contact</button></li>
+                <li><button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-purple-300">About</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-purple-300">Services</button></li>
+                <li><button onClick={() => scrollToSection('approach')} className="text-slate-300 hover:text-purple-300">Approach</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-purple-300">Contact</button></li>
               </ul>
             </div>
             <div>
@@ -572,8 +573,8 @@ const App = () => {
           <div className="border-t border-slate-700 pt-8 text-center text-slate-400 text-sm">
             <p className="mb-4">
               © 2025 Sofia Haroon Therapy. All rights reserved. | 
-              <button className="hover:text-teal-400 ml-2">Privacy Policy</button> | 
-              <button className="hover:text-teal-400 ml-2">GDPR Compliance</button>
+              <button className="hover:text-purple-300 ml-2">Privacy Policy</button> | 
+              <button className="hover:text-purple-300 ml-2">GDPR Compliance</button>
             </p>
             <p className="text-xs">
               This website complies with UK GDPR regulations. Your data is handled with care and confidentiality.
