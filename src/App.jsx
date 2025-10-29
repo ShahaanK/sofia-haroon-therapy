@@ -80,7 +80,6 @@ const App = () => {
   ];
 
   const handleContactSubmit = () => {
-    // TODO: Integrate with EmailJS or backend service
     const mailtoLink = `mailto:sofiaharoon92@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPreferred Contact: ${formData.preferredContact}\n\nMessage:\n${formData.message}`
     )}`;
@@ -91,7 +90,6 @@ const App = () => {
   };
 
   const handleBookingSubmit = () => {
-    // TODO: Integrate with booking service
     const mailtoLink = `mailto:sofiaharoon92@gmail.com?subject=Booking Request from ${bookingData.name}&body=${encodeURIComponent(
       `Name: ${bookingData.name}\nEmail: ${bookingData.email}\nPhone: ${bookingData.phone}\nSession Type: ${bookingData.type}\nPreferred Date: ${bookingData.date}\nPreferred Time: ${bookingData.time}`
     )}`;
