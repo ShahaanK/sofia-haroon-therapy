@@ -202,8 +202,7 @@ const App = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-blue-500 rounded-3xl transform rotate-3"></div>
               <img
-                src="/images/sofia-profile.png"
-                alt="Sofia Haroon - Humanistic Integrative Therapist"
+                src={`${import.meta.env.BASE_URL}images/sofia-profile.png`} 
                 className="relative rounded-3xl shadow-2xl w-full object-cover"
               />
             </div>
